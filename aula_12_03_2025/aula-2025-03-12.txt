@@ -1,0 +1,8 @@
+Aula sobre GitHub, comandos:
+git clone (bixa repositório da web)
+git status (ver possíveis alterações da web/local)
+git add (adicionar os arquivos para o push)
+git commit -m "<msg>" (commit do arquivo com comentário)
+git push (enviar arquivos local para web)
+git pull (puxa alterações do arquivo web para local)
+git restore <arq name> (restore arquivos que foram deletados localmente)
