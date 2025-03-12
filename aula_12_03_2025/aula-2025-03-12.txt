@@ -1,8 +1,36 @@
 Aula sobre GitHub, comandos:
-git clone (bixa repositório da web)
+git clone (baixa repositório da web)
 git status (ver possíveis alterações da web/local)
 git add (adicionar os arquivos para o push)
 git commit -m "<msg>" (commit do arquivo com comentário)
 git push (enviar arquivos local para web)
 git pull (puxa alterações do arquivo web para local)
 git restore <arq name> (restore arquivos que foram deletados localmente)
+
+DDL: CREATE, ALTER
+DML: SELECT, INSERT, UPDATE, DELETE
+
+SELECT *(o que, informações da coluna, * = tudo)
+FROM medicos(onde, tabela)
+WHERE (condição, coluna)
+
+Comandos de agregação: COUNT, MIN/MAX, AVG, SUM
+Retirar duplicidade: DISTINCT
+Ordenação: ORDER BY / ORDER BY <coluna> DESC
+
+Comandos da aula MySQL Workbench:
+SELECT * FROM medicos;
+
+SELECT nome, idade FROM medicos;
+SELECT * FROM medicos WHERE codm = 3;
+SELECT * FROM medicos WHERE idade > 30 AND especialidade =  'pediatria';
+
+SELECT COUNT(*) FROM medicos;
+SELECT MIN(idade) FROM medicos;
+
+SELECT especialidade FROM medicos;
+SELECT DISTINCT(especialidade) FROM medicos;
+
+SELECT idade FROM medicos;
+SELECT idade FROM medicos ORDER BY idade DESC;
+
