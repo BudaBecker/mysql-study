@@ -40,6 +40,8 @@ SELECT MIN(salario) as menor_salario, MAX(salario) as maior_salario FROM funcion
 SELECT MAX(hora) FROM consultas WHERE data = '2024-06-13';
 
 -- 11) Qual a média de idade dos médicos e o total de ambulatórios atendidos por eles?
+SELECT AVG(idade) as avg_idade, COUNT(*) as total_ambulatorios FROM medicos;
+
 -- 12) Buscar o código, o nome e o salário líquido dos funcionários. O salário líquido é obtido pela diferença entre o salário cadastrado menos 20% deste mesmo salário
 -- 13) Buscar o nome dos funcionários que terminam com a letra “a”
 -- 14) Buscar o nome e CPF dos funcionários que não possuam a seqüência “00000” em seus CPFs
