@@ -96,12 +96,13 @@ FROM
 	produtos
 LEFT JOIN	
 	pedidos ON pedidos.produto_id = produtos.id
-WHERE pedidos.produto_id IS NULL;
+WHERE 
+	pedidos.produto_id IS NULL;
 
 --  Contar o número de pedidos feitos por dia
 SELECT
 	pedidos.data_pedido AS data_do_pedido,
-    COUNT(*) AS qnt_de_pedidos
+	COUNT(*) AS qnt_de_pedidos
 FROM
 	pedidos
 GROUP BY
