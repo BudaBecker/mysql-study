@@ -2,7 +2,7 @@
 
 Welcome to the repository dedicated to studies and practices for the **Databse II** course at **CEUB**. The main focus here is learning and applying the Structured Query Language (SQL).
 
-## 🎯 Objective
+## Objective
 
 This repository serves as a centralized place to store:
 
@@ -18,9 +18,9 @@ The repository is organized as follows:
 
 * **/aula_DD_MM_YYYY/**: A folder named with the date of the lecture witch contains materials related to each class session.
 Each folder may contain:
-        * Notes and summaries (e.g. `file.txt`).
-        * SQL scripts (`.sql`) covering examples, DDL, DML, or queries discussed.
-        * Exercises (`exercises.sql`) worked on during the class.
+* Notes and summaries (e.g. `file.txt`).
+    * SQL scripts (`.sql`) covering examples, DDL, DML, or queries discussed.
+    * Exercises (`exercises.sql`) worked on during the class.
 * **/provaX/**: Contains solutions for course exams/tests.
     * e.g. /`prova1`/: Solutions for the first exam.
 * **/revisao_provaX/**: Contains review materials and exercises for exam preparation.
