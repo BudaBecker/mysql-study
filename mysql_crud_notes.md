@@ -27,19 +27,21 @@ SELECT DATABASE();   -- mostra a que está em uso
 |           | `TIMESTAMP`                | Igual `DATETIME`, mas converte fuso.             |
 | Binário   | `BLOB`                     | Arquivos binários (Imagens, PDFs...).            |
 | Lógico    | `BOOLEAN` (`TINYINT(1)`)   | 0 / 1                                            |
----------------------------------------------------------------------------------------------
+
 > Escolha o melhor tipo dependendo da situação, isso ajuda performance e economiza disco.
+
+---
 
 ## Constraints
 
-| Constraint     | Para quê serve                                                          | Exemplo de uso                                                 |
-|----------------|-------------------------------------------------------------------------|----------------------------------------------------------------|
-| `PRIMARY KEY`  | Garante unicidade e impede valores `NULL`. Cria índice automaticamente. | `id INT PRIMARY KEY`                                           |
-| `NOT NULL`     | Impede valores nulos na coluna.                                         | `nome VARCHAR(50) NOT NULL`                                    |
-| `UNIQUE`       | Garante que todos os valores da coluna (ou combinação) sejam distintos. | `email VARCHAR(255) UNIQUE`                                    |
-| `DEFAULT`      | Define valor padrão quando `INSERT` não especifica a coluna.            | `status VARCHAR(20) DEFAULT 'ativo'`                           |
-| `CHECK`        | Validação em nível de linha (MySQL 8.0 +).                              | `idade TINYINT CHECK (idade >= 0)`                             |
-| `FOREIGN KEY`  | Referência a chave de outra tabela; mantém integridade relacional.      | `FOREIGN KEY (dono_id) REFERENCES donos(id) ON DELETE CASCADE` |
+| Ex. Constraints | Para quê serve                                                          | Exemplo de uso                                                 |
+|-----------------|-------------------------------------------------------------------------|----------------------------------------------------------------|
+| `PRIMARY KEY`   | Garante unicidade e impede valores `NULL`. Cria índice automaticamente. | `id INT PRIMARY KEY`                                           |
+| `NOT NULL`      | Impede valores nulos na coluna.                                         | `nome VARCHAR(50) NOT NULL`                                    |
+| `UNIQUE`        | Garante que todos os valores da coluna (ou combinação) sejam distintos. | `email VARCHAR(255) UNIQUE`                                    |
+| `DEFAULT`       | Define valor padrão quando `INSERT` não especifica a coluna.            | `status VARCHAR(20) DEFAULT 'ativo'`                           |
+| `CHECK`         | Validação em nível de linha (MySQL 8.0 +).                              | `idade TINYINT CHECK (idade >= 0)`                             |
+| `FOREIGN KEY`   | Referência a chave de outra tabela; mantém integridade relacional.      | `FOREIGN KEY (dono_id) REFERENCES donos(id) ON DELETE CASCADE` |
 
 ## Tables (DDL)
 ```sql
@@ -144,7 +146,6 @@ CREATE TABLE gatos (
 | `SET NULL`               | Grava `NULL` na coluna-filha (ela precisa permitir `NULL`).                    |
 | `RESTRICT` / `NO ACTION` | Bloqueia a operação se existirem linhas filhas (comporta-se como padrão).      |
 | `SET DEFAULT`            | Grava o valor `DEFAULT` definido na coluna (pouco usado).                      |
--------------------------------------------------------------------------------------------------------------
 
 ---
 
